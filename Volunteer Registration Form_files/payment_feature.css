@@ -1,0 +1,1515 @@
+/* stylelint-disable */
+/*
+   Hi developers,
+
+   PLEASE DO NOT MAKE CHANGES IN THIS FILE ANYMORE AS 
+   WE'RE GRADUALLY MOVING TO NEW FORM-RESOURCES REPOSITORY
+   PLEASE HEAD TO THE NEW FORM-RESOURCES REPOSITORY IF YOU
+   NEED TO MAKE CHANGES AROUND HERE.
+
+   THIS FILE WILL BE DELETED AS SOON AS WE CAN SAFELY DELETE IT.
+
+   If you still have questions contact with me <kaan@jotform.com> and 
+   I will happily help you.
+
+   Thank you. 
+*/
+
+/* PAYMENT FEATURES CSS */
+/* Product list SEARCH field //////////////// */
+
+.filter-container {
+    position: absolute;
+    top: -39px;
+    right: 0px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.filter-container:after {
+    display: block;
+    clear: both;
+    content: "";
+    width:0;
+}
+
+#productSearch-input {
+    margin-left: 0;
+    border-width: 1px;
+    border-style: solid;
+    font-size: 15px;
+    line-height: 16px;
+    padding: 0 22px 0 8px;
+    background-image: url(https://cdn.jotfor.ms/assets/img/builder/search_icon.png);
+    background-size: 14px;
+    background-position: right 4px center;
+    background-repeat: no-repeat;
+    width: auto;
+    min-width: auto;
+    height: 40px;
+    box-sizing: border-box;
+    border-radius: 2px;
+    display: inline-block;
+}
+
+#productSearch-input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #8A94A9;
+  font-family: Inter,sans-serif;
+  opacity: 1; /* Firefox */
+}
+
+#productSearch-input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #8A94A9;
+  font-family: Inter,sans-serif;
+}
+
+#productSearch-input::-ms-input-placeholder { /* Microsoft Edge */
+  color: #8A94A9;
+  font-family: Inter,sans-serif;
+}
+
+.form-label-top.search-enabled,
+.form-label-top.category-enabled {
+    padding-right: 144px;
+}
+
+.form-label-top.search-enabled.category-enabled {
+    padding-right: 290px;
+}
+
+.search-enabled~div {
+    position: relative;
+}
+
+.form-label-top.search-enabled~.form-input-wide,
+.form-label-top.category-enabled~.form-input-wide,
+.form-label-top.product-sorting-enabled~.form-input-wide{
+    padding-top: 10px;
+    margin-top: 16px;
+    position: relative;
+}
+
+li[data-type="control_paymentmethods"] > .form-input-wide {
+    padding-top: 0 !important;
+    margin-top: 8px !important;
+}
+
+.form-label-left.search-enabled~.form-input,
+.form-label-right.search-enabled~.form-input {
+    border-top: 1px solid;
+    border-color: rgba(0, 0, 0, 0.1);
+    padding-top: 12px;
+    margin-top: 54px;
+    width: calc(100% - 160px);
+    border-top: 1px solid;
+    border-color: rgba(0, 0, 0, 0.1);
+}
+
+.form-product-item {
+    box-sizing: border-box;
+}
+
+.form-product-item.not-found,
+.form-product-item.not-found~br {
+    display: none !important;
+}
+
+/* E.O. Product list SEARCH field //////////////// */
+
+/* Product list CATEGORY field //////////////// */
+
+.category-enabled ~ div #payment-category-dropdown,
+.category-enabled ~ div .payment-dropdown {
+    width: 135px;
+    display: inline-block;
+    position: relative;
+}
+
+.category-enabled ~ div #payment-category-dropdown {
+    order: 2;
+}
+
+#payment-sorting-products-dropdown {
+    order: 3;
+    min-width: 182px;
+}
+
+#payment-sorting-products-dropdown .dropdown-container{
+    position: relative;
+}
+
+#payment-sorting-products-dropdown.option-selected .dropdown-hint,
+#payment-sorting-products-dropdown:not(.option-selected) .clear-option{
+    display: none;
+}
+
+.dropdown-container .select-content .clear-option {
+    background-color: #f3f3fe;
+    margin: 0 -8px -2px -8px;
+    border-top: 1px solid #f0f0fb;
+    padding:  8px !important;
+}
+
+.search-enabled.category-enabled ~ div #payment-category-dropdown,
+.search-enabled.category-enabled ~ div .payment-dropdown{
+    width: 135px;
+    display: inline-block;
+}
+
+#payment-category-dropdown .select-area {
+    border-style: solid;
+    border-width: 1px;
+    height: 40px;
+    box-sizing: border-box;
+    line-height: 38px;
+    padding-left: 8px;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='10' height='6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%2357647E' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center right 10px;
+    display: flex;
+    border-radius: 4px;
+}
+
+.payment-dropdown#payment-sorting-products-dropdown .select-area {
+    border-style: solid;
+    border-width: 1px;
+    height: 40px;
+    box-sizing: border-box;
+    line-height: 38px;
+    padding-left: 8px;
+    background-image: url("https://cdn.jotfor.ms/assets/img/payments/sort_icon.png");
+    background-repeat: no-repeat;
+    background-position: center right 10px;
+    background-size: 16px;
+    display: flex;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#payment-category-dropdown .dropdown-hint,
+.payment-dropdown .dropdown-hint {
+    font-size: 15px;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 4px;
+    color: #8A94A9;
+    width: inherit;
+    max-width: 82px;
+}
+
+#payment-category-dropdown .selected-values,
+.payment-dropdown .selected-value {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 114px;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+#payment-category-dropdown .select-content,
+.payment-dropdown .select-content {
+    padding: 2px 8px;
+    position: absolute;
+    top: 32px;
+    right: 0;
+    z-index: 9;
+    display: none;
+    min-width: 109px;
+    font-size: 14px;
+}
+
+.filter-container .select-content {
+    left: 0;
+    margin-top:3px;
+    right: auto;
+    max-width: 180px;
+    min-width: 135px;
+    box-sizing: border-box;
+    border-radius: 2px;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.select-content .option {
+    cursor: pointer;
+}
+
+.payment-dropdown#payment-sorting-products-dropdown .select-content {
+    right: 0px;
+    top: 40px;
+    border-radius: 4px;
+}
+
+.p-filter-one-column {
+    padding-right: 192px !important;
+}
+
+.p-filter-three-column,
+.p-filter-two-column {
+    padding-right: 0 !important;
+}
+
+.p-filter-three-column ~ .form-input-wide,
+.p-filter-two-column ~ .form-input-wide {
+    margin-top: 0 !important;
+}
+
+.p-filter-three-column ~ .form-input-wide .filter-container,
+.p-filter-two-column ~ .form-input-wide .filter-container {
+    position: relative !important;
+    width: 100%;
+    top: 0!important;
+    margin-bottom: 12px;
+}
+
+.p-filter-three-column ~ .form-input-wide .filter-container .select-area,
+.p-filter-two-column ~ .form-input-wide .filter-container .select-area,
+.p-filter-three-column ~ .form-input-wide .filter-container,
+.p-filter-two-column ~ .form-input-wide .filter-container,
+.p-filter-three-column ~ .form-input-wide #payment-category-dropdown,
+.p-filter-two-column ~ .form-input-wide #payment-category-dropdown,
+.p-filter-three-column ~ .form-input-wide #productSearch-input,
+.p-filter-two-column ~ .form-input-wide #productSearch-input,
+.p-filter-three-column ~ .form-input-wide .payment-dropdown,
+.p-filter-two-column ~ .form-input-wide .payment-dropdown,
+.p-filter-three-column ~ .form-input-wide .selected-values,
+.p-filter-two-column ~ .form-input-wide .selected-values  {
+    width: 100% !important;
+}
+
+.p-filter-two-column ~ .form-input-wide .filter-container {
+    width: calc(100% + 8px) !important;
+    margin-left: -4px !important;
+}
+
+.p-filter-two-column ~ .form-input-wide .filter-container > *:nth-child(1) {
+    margin: 0 4px !important;
+}
+
+.p-filter-two-column ~ .form-input-wide .filter-container > *:nth-child(2) {
+    margin: 0 4px !important;
+}
+
+.p-filter-three-column ~ .form-input-wide .filter-container {
+    width: calc(100% + 8px) !important;
+    margin-left: -4px;
+}
+
+.p-filter-three-column ~ .form-input-wide .filter-container > *:nth-child(1) {
+    margin: 0 4px !important;
+}
+
+.p-filter-three-column ~ .form-input-wide .filter-container > *:nth-child(2) {
+    margin: 0 4px !important;
+}
+
+.p-filter-three-column ~ .form-input-wide .filter-container > *:nth-child(3) {
+    margin: 0 4px !important;
+}
+
+.p-filter-two-column ~ .form-input-wide .filter-container  .payment-dropdown .select-content,
+.p-filter-three-column ~ .form-input-wide .filter-container  .payment-dropdown .select-content,
+.p-filter-two-column ~ .form-input-wide .filter-container  .multi-select-dropdown .select-content,
+.p-filter-three-column ~ .form-input-wide .filter-container  .multi-select-dropdown .select-content{
+    width: 100% !important;
+    max-width: unset!important;
+}
+
+label.search-enabled.category-enabled + div #payment-category-dropdown .select-content,
+label.search-enabled.category-enabled + div .payment-dropdown .select-content {
+    left: 0;
+    right: auto;
+    max-width: 180px;
+    min-width: 135px;
+    box-sizing: border-box;
+    border-radius: 2px;
+    border-width: 1px;
+    border-style: solid;
+}
+
+#payment-category-dropdown .select-content .option,
+.payment-dropdown .select-content .option {
+    overflow: hidden;
+    display: flex;
+    padding: 6px 0;
+    align-items: center;
+    position: relative;
+}
+
+#payment-category-dropdown .select-content .option input[type="checkbox"],
+.payment-dropdown .select-content .option input[type="checkbox"] {
+    position: absolute;
+    left: 0;
+    top: 4px;
+    display: block;
+}
+
+#payment-category-dropdown .select-content span,
+.payment-dropdown .select-content span {
+    white-space: nowrap;
+    padding-left: 22px;
+    display: block;
+    padding-right: 4px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+#payment-category-dropdown.open .select-content,
+.payment-dropdown.open .select-content {
+    display: block;
+}
+
+.rightPanel #app_wizards .paymentsWizardV4 .productSearchSettingsEditor .category_list {
+    margin-top: 12px !important;
+    height: auto !important;
+    padding: 1px 8px !important;
+}
+
+.rightPanel #app_wizards .paymentsWizardV4 .productSearchSettingsEditor .category_list:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.rightPanel #app_wizards .paymentsWizardV4 .productSearchSettingsEditor .category_list .line.columnV4 {
+    display: flex !important;
+    margin-top: 0 !important;
+    position: relative;
+}
+
+.rightPanel #app_wizards .field_disabled .column { opacity: 0.4; }
+.rightPanel #app_wizards .field_disabled .column input { color: #FFFFFF !important; }
+
+.productSearchSettingsEditor .category_list .line span {
+    cursor: move;
+    border: 0px solid rgb(48, 51, 59);
+    padding: 0px 4px;
+    display: inline-block;
+    border-right: 0;
+    border-radius: 2px 0 0 2px;
+    background-color: #1ea0f1;
+    color: #ffffff;
+    padding-top: 6px;
+    width: 28px;
+    height:46px;
+    position: relative;
+    padding-top: 24px;
+    font-size: 11px;
+    text-align: center;
+}
+
+.productSearchSettingsEditor .category_list li {
+    position: relative;
+    background-color: white;
+    padding: 0;
+    margin-bottom: 6px;
+    border-radius: 3px;
+    height: 46px;
+    margin: 6px 0 6px 0;
+}
+
+.productSearchSettingsEditor .category_list li:first-child {}
+
+.productSearchSettingsEditor .category_list li > div.line.columnV4 {
+    margin-top: 0 !important;
+}
+
+.productSearchSettingsEditor .category_list .line span:before {
+    display: inline-block;
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 9px;
+    height: 1px;
+    left: 6px;
+    opacity: .5;
+    box-shadow: 0 5px 0 #fff, 0 7px 0 #fff, 0 9px 0 #fff;
+    transition: all .15s ease;
+}
+
+.productSearchSettingsEditor .category_list li li {
+    margin-bottom: 0px;
+    height: 36px;
+}
+
+.rightPanel #app_wizards .paymentsWizardV4 .productSearchSettingsEditor .category_list .line input[type="text"] {
+    border: 0px solid rgb(48, 51, 59) !important;
+    display: inline-block;
+    border-radius: 0 2px 2px 0 !important;
+    cursor: text;
+    background-color: #FFFFFF !important;
+    color: #000;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding: 0 6px 0 6px!important;
+    height: 30px !important;
+    margin-top: 8px !important;
+    margin-left: 6px !important;
+    margin-right: 6px !important;
+    box-shadow: none;
+    max-width: 278px;
+    line-height: 28px;
+    cursor: text !important;
+}
+
+.rightPanel #app_wizards .paymentsWizardV4 .productSearchSettingsEditor .category_list .line > .inpt:hover {
+    background-color: #EEE !important;
+}
+
+.productSearchSettingsEditor .category_list .line .dropdown_btn {
+    color: #B4B9BF;
+    right: 0;
+    position: relative;
+    background-color: #1ea0f1;
+    border: 0;
+    background-image: url('https://cdn.jotfor.ms/assets/img/payments/add_product.svg');
+    background-size: 22px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    cursor: pointer;
+    padding: 0;
+    margin-right: 6px;
+    margin-top: 7px;
+    visibility: hidden;
+    border-radius: 2px;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+.productSearchSettingsEditor .category_list .line .delete_btn {
+    color: #B4B9BF;
+    right: 0;
+    position: relative;
+    background-color: #1ea0f1;
+    border: 0;
+    background-image: url('https://cdn.jotfor.ms/assets/img/payments/trash_btn.svg');
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    visibility: hidden;
+    padding: 0;
+    min-width: 32px;
+    margin-top: 7px;
+    margin-right: 6px;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+.productSearchSettingsEditor .category_list .line:hover .delete_btn,
+.productSearchSettingsEditor .category_list .line:hover .dropdown_btn {
+    visibility: visible;
+}
+
+.productSearchSettingsEditor .category_list .line .delete_btn:hover,
+.productSearchSettingsEditor .category_list .line .dropdown_btn:hover {
+    opacity: 0.8;
+}
+
+.productSearchSettingsEditor .category_list .line .dropdown_btn.btn_clicked {
+    background-color:#31333b;
+}
+
+.productSearchSettingsEditor .category_list .line ul {
+    position: absolute;
+    background-color: #31333b;
+    border: 1px solid rgb(48, 51, 59) !important;
+    padding: 4px 4px;
+    width: 226px;
+    top: 7px;
+    right: 80px;
+    z-index: 99;
+    border-radius: 2px;
+    max-height: 200px;
+    overflow:hidden;
+    overflow-y: auto;
+}
+
+.productSearchSettingsEditor .category_list .line ul::-webkit-scrollbar-thumb {
+    background: #202020; 
+    border-radius: 4px;
+    border: 2px solid #31333b; 
+}
+
+.productSearchSettingsEditor .category_list .line ul::-webkit-scrollbar {
+    width: 8px;
+    background-color: #31333b;
+    border-radius: 4px;
+    border: 0;
+}
+
+.paymentsettings .quantity_selector_btn a.btn,
+.paymentsettings .product_option_selector_btn a.btn {
+    background-color: #2F333B !important;
+}
+
+.currency-column .currency-dropdown ul::-webkit-scrollbar-thumb {
+    background: #202020; 
+    border-radius: 4px;
+    border: 2px solid #31333b; 
+}
+
+.currency-column .currency-dropdown ul::-webkit-scrollbar {
+    width: 8px;
+    background-color: #31333b;
+    border-radius: 4px;
+    border: 0;
+}
+
+.productSearchSettingsEditor .category_list .line ul li {
+    display: flex;
+    align-items: center;
+    padding: 4px;
+    background-color: #31333b;
+    margin-top: 0;
+}
+
+.productSearchSettingsEditor .category_list .line ul li:hover {
+    background-color: #2a2c33;
+    border-radius: 3px;
+}
+
+
+.productSearchSettingsEditor .category_list .line ul li label {
+    margin-left: 6px;
+    cursor: pointer;
+    width: 176px !important;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.productSearchSettingsEditor .category_list .line ul span {
+    background-color: transparent;
+    border: 0;
+    color: #b4b9c0 !important;
+    padding: 0 6px;
+    height: 32px;
+    line-height: 32px;
+    cursor: pointer;
+}
+
+.productSearchSettingsEditor .category_list .line ul input[type="checkbox"] {
+    cursor: pointer !important;
+    margin-left: 4px;
+}
+
+.search-subproduct-selection-hightlight {
+    -webkit-box-shadow: -2px 3px 5px 0px rgba(141,183,199,0.27);
+    -moz-box-shadow: -2px 3px 5px 0px rgba(141,183,199,0.27);
+    box-shadow: -2px 3px 5px 0px rgba(141,183,199,0.27);
+}
+
+.search-subproduct-selection-show {
+    display:block !important;
+}
+
+.form-product-category-item {
+    margin: 0 0 24px 0;
+    padding: 12px 24px 18px 0 !important;
+    display: block;
+    font-size: 16px;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    cursor: pointer;
+    position: relative;
+}
+
+.form-product-category-item.title_collapsed {
+    margin: 0 0 6px 0 !important;
+}
+
+.form-product-category-item .selected-items-icon,
+.isBuilder .form-product-category-item .selected-items-icon {
+    display: none;
+}
+
+.form-product-category-item.title_collapsed.has_selected_product .selected-items-icon {
+    display:inline;
+    color: #fff;
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 3px;
+    padding: 8px 10px 7px 28px;
+    background-image: url('https://cdn.jotfor.ms/assets/img/payments/shopping_bag.svg');
+    background-repeat: no-repeat;
+    background-position: top 7px left 8px;
+    background-size: 16px;
+    margin-left: 6px;
+    background-color: #2e69ff;
+}
+
+.form-product-category-item .selected-items {
+    display: block;
+}
+
+.form-product-category-item:after {
+    content: "";
+    display:block;
+    width: 22px;
+    height: 22px;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='10' height='6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%2357647E' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 10px;
+    position: absolute;
+    right:0;
+    bottom: 17px;
+    border: 1px solid #d5dae8;
+    border-radius: 2px;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    transform: rotate(180deg);
+}
+
+.form-product-category-item.title_collapsed:after  {
+    transform: rotate(360deg);
+}
+
+#app_wizards .ji-pw_Options:before,
+#tethers .ji-pw_Options:before,
+.tethers .ji-pw_Options:before {
+    content: "\002B" !important;
+    display: inline-block;
+    font-size: x-large;
+    float: left;
+    line-height: 29px;
+    padding-left: 10px;
+}
+
+#app_wizards .ji-pw_Quantity_v3:before,
+#tethers .ji-pw_Quantity_v3:before,
+.tethers .ji-pw_Quantity_v3:before {
+    content: "\002B" !important;
+    display: inline-block;
+    font-size: x-large;
+    float: left;
+    line-height: 29px;
+    padding-left: 10px;
+}
+
+.form-product-item.not-category-found+.p_item_separator,
+.form-product-item.not-found+.p_item_separator {
+    display: none;
+}
+
+.rightPanel #app_wizards .itemBox .category-dropdown .m-dropdownWrapper {
+    border-color: #DDD;
+    background: #FFFFFF;
+    color: #666;
+    border-radius: 2px;
+    margin-top: 4px;
+    box-shadow: none;
+    height: 28px;
+    line-height: 12px;
+    overflow: hidden;
+    padding-right: 28px !important;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 154px;
+    display: inline-block;
+}
+
+.rightPanel #app_wizards .itemBox .category-dropdown .m-dropdownWrapper:hover {
+    border-color: #CCC !important;
+    box-shadow: 0 2px 4px rgba(86,70,50,.1);
+}
+
+.rightPanel #app_wizards .itemBox .category-dropdown .m-dropdownWrapper .m-dropdownMask {
+    background-color: #FFFFFF;
+    padding: 0;
+    width: 26px;
+    height: 26px;
+}
+
+.rightPanel #app_wizards .itemBox .category-dropdown .m-dropdownWrapper .m-dropdownMask:after {
+    background-color: #DDD;
+    left: 0;
+}
+
+.rightPanel #app_wizards .itemBox .category-dropdown .m-dropdownWrapper:hover .m-dropdownMask:after {
+    background-color: #CCC;
+    left: 0;
+}
+
+.rightPanel #app_wizards .itemBox .category-dropdown .m-dropdownWrapper .m-dropdownMask:before {
+    border:0;
+    background-color: transparent;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='10' height='6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%2357647E' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 24px;
+    height: 26px;
+    display: block;
+    top: 0;
+    right: 0;
+}
+
+.rightPanel #app_wizards .itemBox .multiselect-list .checkBox {
+    background-color: white;
+    border: 1px solid #DDD;
+    border-radius: 3px;
+    color: #666;
+}
+
+.category-head {
+    display: block;
+    color: #C6C8CC;
+    overflow: hidden;
+    padding: 12px 28px 12px 0;
+    background-image: url('https://cdn.jotfor.ms/assets/img/payments/collapse_icon.svg');
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position: center right -2px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.category-head.collepsed_category {
+    background-image: url('https://cdn.jotfor.ms/assets/img/payments/expand_icon.svg');
+    border-bottom: 1px solid #48515a;
+    /*border-top: 1px solid #343b42;*/
+}
+
+.category-head.collepsed_category + .category-body{
+    display: none;
+}
+
+#builderProductList div:first-child .collepsed_category {
+    border-top: 0;
+}
+
+#builderProductList div:last-child .collepsed_category {
+    border-bottom: 0;
+}
+
+.category-head .left-side {
+    float: left;
+}
+
+.category-head .right-side {
+    float: right;
+    font-size: 13px;
+    color: #848d98;
+    line-height: 24px;
+}
+
+/* Dropdown settings pannel */
+#tethers .multiselect-list {
+    background-color: #31333b !important;
+    width: 354px;
+    margin-left: 0px;
+    border: 0;
+    padding: 4px 0;
+    border-radius: 1px;
+    box-shadow: 0 1px 5px 0 rgba(0,0,0,.2);
+}
+
+#tethers .multiselect-list li label.checkBox {
+    background-color: #31333b !important;
+    color: #949fae!important;
+    display: block !important;
+    line-height: 18px;
+    padding: 6px 14px !important;
+    display: flex !important;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 2px !important;
+}
+
+#tethers .multiselect-list li label.checkBox:hover {
+    background-color: #2a2c33 !important;
+}
+
+#tethers .multiselect-list li label.checkBox .checkBox-label {
+    display: block !important;
+    padding-left: 18px !important;
+}
+
+#tethers .multiselect-list li label.checkBox input {
+    width: 16px;
+    height: 16px;
+    min-width: 16px;
+}
+/* E.O Dropdown settings pannel */
+
+#tethers.product-category-tether .multiselect-list {
+    border:1px solid #DDD;
+    padding: 4px;
+    background-color: #ffffff !important;
+    width: 230px;
+    border-radius: 1px;
+    box-shadow: 0 1px 5px 0 rgba(0,0,0,.2);
+}
+
+#tethers.product-category-tether .multiselect-list li .checkBox {
+    background-color: #FFFFFF !important;
+    padding: 6px 8px !important;
+}
+
+#tethers.product-category-tether .multiselect-list li .checkBox .checkBox-label {
+    display: block;
+}
+
+#tethers.product-category-tether .multiselect-list li:hover .checkBox {
+    background-color: #EAEAEA !important;
+    border-radius: 3px;
+}
+
+#tethers.product-category-tether .multiselect-list li .checkBox .checkBox-label {
+    color: #464646 !important;
+    display: block !important;
+}
+
+#tethers.product-category-tether .multiselect-list li .checkBox span:before {
+   border: 1px solid #BBB !important;
+   border-radius: 2px !important;
+   box-shadow: none !important;
+}
+
+@media screen and (max-width: 420px), screen and (max-device-width: 768px) and (orientation: portrait), screen and (max-device-width: 415px) and (orientation: landscape) {
+    
+        li[data-payment="true"] .search-enabled.category-enabled ~ div {
+            margin-top: 0 !important;
+            padding-top: 12px !important;
+        }
+        .search-enabled.category-enabled ~div #productSearch-input {
+            width: 100%;
+        }
+        .search-enabled.category-enabled ~div #payment-category-dropdown,
+        .search-enabled.category-enabled ~div .payment-dropdown {
+            left: 0;
+            width: 100% !important;
+        }
+       .search-enabled.category-enabled ~div #payment-category-dropdown .select-content,
+       .search-enabled.category-enabled ~div .payment-dropdown .select-content {
+            width: 100% !important;
+            max-width: 100% !important;
+            box-sizing: border-box;
+        }
+        #payment-category-dropdown .selected-values,
+        .payment-dropdown .selected-values {
+            width: 252px !important;
+        }
+}
+
+/* E.O. Product list CATEGORY field //////////////// */
+
+/* Product list LAYOUT field //////////////// */
+
+.productListLayoutType {
+    display: flex;
+    width: 100%;
+    padding-top:12px;
+}
+.productListLayoutType div {
+    width: 33.33333%;
+    text-align: center;
+    font-size: 12px;
+    border: 1px solid #31333b;
+    display: block;
+    padding-top: 62px;
+    box-sizing:border-box;
+    margin-right: 12px;
+    color: #8e98a7;
+    background-repeat: no-repeat;
+    background-position: center top 0px;
+    background-size: 60px;
+    position: relative;
+    border-radius: 3px;
+    background-color: #525e70;
+    cursor: pointer;
+}
+.productListLayoutType div.checked {
+    background-color: #1ba0f0;
+}
+.productListLayoutType div span {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -28px;
+}
+.productListLayoutType div:nth-child(1) {
+    background-image: url('https://cdn.jotfor.ms/assets/img/payments/list_view.svg');
+}
+.productListLayoutType div:nth-child(2) {
+    background-image: url('https://cdn.jotfor.ms/assets/img/payments/card_view_2col.svg');
+}
+.productListLayoutType div:nth-child(3) {
+    margin-right: 0;
+    background-image: url('https://cdn.jotfor.ms/assets/img/payments/card_view_3col.svg');
+}
+
+/*Card 2 colomun*/
+
+.form-line.card-2col div[data-wrapper-react="true"] {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: stretch;
+    justify-content: space-between;
+}
+.form-line.card-2col .form-product-item .form-product-container .form-sub-label-container label.form-sub-label,
+.form-line.card-2col .form-product-item .form-product-container .form-sub-label-container span.select_cont {
+    display: block;
+}
+.form-line.card-2col .form-product-item .form-product-container .form-sub-label-container label.form-sub-label {
+    white-space: normal !important;
+    height: auto !important;
+    min-height: auto !important;
+    line-height: 16px !important;
+    padding-right: 0;
+}
+.isBuilder .form-line.card-2col div.question-wrapper > div.form-input-wide,
+.form-line.card-2col > div.form-input-wide{
+    padding-top: 10px;
+}
+.form-line.card-2col div[data-wrapper-react="true"] span.form-product-item {
+    width: calc(50% - 10px);
+    margin-bottom: 12px;
+}
+.form-line.card-2col .form-product-item + .p_item_separator {
+    display: none;
+}
+.form-line.card-2col div[data-wrapper-react="true"] .form-product-item.new_ui {
+    border-width: 1px;
+    border-style: solid;
+    position: relative;
+    border-radius: 3px;
+    padding: 0 0 0 28px;
+    margin: 0 0 20px 0;
+}
+
+.form-line.card-2col.subscription_cont div[data-wrapper-react="true"] .form-product-item.new_ui .form-product-item-detail.new_ui {
+    display: block !important;
+}
+.form-line.card-2col.subscription_cont .form-product-details {
+    padding-left: 0px;
+}
+.form-line.card-2col .p_item_separator {
+    margin: 12px 0 0 !important;
+    opacity: 0 !important;
+}
+.form-line.card-2col .select_border {
+    opacity: 1;
+}
+.form-line.card-2col div[data-wrapper-react="true"] .form-product-item.new_ui .form-product-item-detail.new_ui {
+    display: block !important;
+    margin-top: 0 !important;
+    padding: 0;
+}
+.form-line.card-2col div[data-wrapper-react="true"] .form-product-item.new_ui .form-product-container {
+    padding: 16px;
+    margin: 0 !important;
+}
+.form-line.card-2col div[data-wrapper-react="true"] .form-product-item.new_ui.show_subtotal .form-product-container {
+    padding: 16px 16px 34px 16px !important;
+    margin: 0 !important;
+}
+.form-line.card-2col .form-product-item .form-special-subtotal {
+    bottom: 14px !important;
+    top: auto;
+}
+.form-line.card-2col div[data-wrapper-react="true"] .form-product-item.new_ui .form-product-container .form-product-name {
+    min-height: auto;
+    padding: 0;
+}
+.form-line.card-2col div[data-wrapper-react="true"] .form-product-item.new_ui .p_col {
+    position: absolute;
+    left: 10px;
+    top: 12px !important;
+}
+.form-line.card-2col div[data-wrapper-react="true"] .form-product-item.new_ui.show_image {
+    padding: 0;
+    display: block;
+}
+.form-line.card-2col div[data-wrapper-react="true"] .form-product-item.new_ui.show_image .p_image {
+    padding: 0;
+    float: none;
+    min-width: 120px;
+    max-height: 168px;
+    width: 100%;
+    height: 100%;
+}
+.form-line.card-2col div[data-wrapper-react="true"] .form-product-item.new_ui.show_image .image_zoom {
+    width: 100%;
+    height: 100%;
+}
+.form-line.card-2col div[data-wrapper-react="true"] .form-product-item.new_ui.show_image .image_area {
+    min-height: 168px;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    border:0;
+    background-color: #F4F4F4;
+    border-bottom: 1px solid #F4F4F4;
+}
+.form-line.card-2col .form-product-item.new_ui.show_image .form-product-container .form-sub-label-container {
+    margin-right: 12px;
+    margin-top: 2px;
+}
+.form-line.card-2col .form-product-item.new_ui.show_image .form-product-container .form-product-description {
+    padding-right: 0px !important;
+    padding-top: 4px;
+}
+.form-line.card-2col div[data-wrapper-react="true"] .form-product-item.new_ui.show_image .title_description {
+    padding: 0;
+    min-height: auto;
+}
+.form-line.card-2col div[data-wrapper-react="true"] .form-product-item.new_ui .form-product-details {
+    padding-top: 4px;
+    position: relative;
+    display: block;
+    top: 0;
+    left: 0;
+    margin-left: 0;
+}
+.form-line.card-2col div[data-wrapper-react="true"] .form-product-item.show_image .p_checkbox {
+    margin-top: 0;
+}
+.form-line.card-2col .payment_footer.new_ui {
+    margin: 10px 0;
+    position: relative;
+}
+.form-line.card-2col .form-product-category-item {
+    margin: 0 0 18px 0;
+    width: 100%;
+}
+.form-line.card-2col .filter-container {
+    right: 0px !important;
+}
+.form-line.card-2col .payment_footer.new_ui .total_area {
+    padding-right: 0;
+}
+.form-line.card-2col .form-product-item.new_ui.sold_out_product .form-product-details,
+.form-line.card-2col .form-product-item.not_enough_stock_product .form-product-details {
+    display: flex !important;
+    width: 100%;
+    flex-direction: column;
+}
+.form-line.card-2col .form-product-item.new_ui .form-product-details .payment-badge {
+    margin-top: 6px;
+    margin-bottom: 6px;
+    margin-left: 0;
+    position: relative;
+    max-width: 70px;
+}
+.form-line.card-2col .form-product-item.new_ui .form-product-details .payment-badge.just-sold-out-label {
+    max-width: 90px;
+}
+.form-line.card-2col .form-product-item.new_ui .form-product-details .payment-badge.not_enough_stock_product {
+    max-width: 126px;
+}
+/*Card 3 colomun*/
+.form-line.card-3col div[data-wrapper-react="true"] {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: stretch;
+    /*justify-content: space-between;*/
+}
+.form-line.card-3col div[data-wrapper-react="true"] span.form-product-item {
+    width: calc(33.333% - 8px);
+    margin-bottom: 12px;
+}
+.form-line.card-3col div[data-wrapper-react="true"] .p_item_separator {
+    display: none !important;
+}
+.isBuilder .form-line.card-3col div.question-wrapper > div.form-input-wide,
+.form-line.card-3col > div.form-input-wide {
+    padding-top: 12px;
+    margin-left: 0;
+    margin-right: 0;
+}
+.form-line.card-3col .form-product-item .form-product-container .form-sub-label-container label.form-sub-label,
+.form-line.card-3col .form-product-item .form-product-container .form-sub-label-container span.select_cont {
+    display: block;
+}
+.form-line.card-3col .form-product-item .form-product-container .form-sub-label-container label.form-sub-label {
+    white-space: normal !important;
+    height: auto !important;
+    min-height: auto !important;
+    line-height: 16px !important;
+    padding-right: 0;
+}
+.form-line.card-3col .form-product-item + .p_item_separator {
+    display: none;
+}
+.form-line.card-3col div[data-wrapper-react="true"] .form-product-item.new_ui {
+    border-width: 1px;
+    border-style: solid;
+    position: relative;
+    padding: 12px 14px 12px 44px !important;
+    border-radius: 3px;
+    margin: 0 12px 12px 0;
+}
+.form-line.card-3col div[data-wrapper-react="true"] .form-product-item.new_ui.on_col3 {
+    margin-right: 0;
+}
+.form-line.card-3col.subscription_cont div[data-wrapper-react="true"] .form-product-item.new_ui .form-product-item-detail.new_ui {
+    display: block !important;
+}
+.form-line.card-3col.subscription_cont .form-product-details {
+    padding-left: 0px;
+}
+.form-line.card-3col .p_item_separator {
+    margin: 12px 0 0 !important;
+    opacity: 0 !important;
+}
+.form-line.card-3col .select_border {
+    opacity: 1;
+}
+.form-line.card-3col div[data-wrapper-react="true"] .form-product-item.new_ui .form-product-item-detail.new_ui {
+    display: block !important;
+    margin-top: 0 !important;
+    padding: 0;
+}
+.form-line.card-3col div[data-wrapper-react="true"] .form-product-item.new_ui .form-product-container {
+    padding: 10px;
+    margin: 0 !important;
+}
+.form-line.card-3col div[data-wrapper-react="true"] .form-product-item.new_ui.show_subtotal .form-product-container {
+    padding: 10px 10px 34px 10px !important;
+    margin: 0 !important;
+}
+.form-line.card-3col .form-product-item .form-special-subtotal {
+    bottom: 14px !important;
+    top: auto;
+    bottom: 14px !important;
+    top: auto;
+    width: calc(100% + 20px) !important;
+    right: 4px!important;
+    display: flex !important;
+    justify-content: flex-end !important;
+}
+.form-line.card-3col .form-product-item .form-special-subtotal .form-item-subtotal {
+    padding-right: 4px;
+}
+.form-line.card-3col div[data-wrapper-react="true"] .form-product-item.new_ui .form-product-container .form-product-name {
+    min-height: auto;
+    padding: 0 0 6px 0;
+}
+.form-line.card-3col .form-product-item .form-product-container .form-product-description {
+    padding-right: 0px;
+}
+.form-line.card-3col div[data-wrapper-react="true"] .form-product-item.new_ui .p_col {
+    position: absolute;
+    left: 10px;
+    top: 12px !important;
+}
+.form-line.card-3col div[data-wrapper-react="true"] .form-product-item.new_ui.show_image {
+    padding: 0 !important;
+    display: block;
+}
+.form-line.card-3col div[data-wrapper-react="true"] .form-product-item.new_ui:not(.show_image) {
+    padding: 0 8px 0 32px !important;
+}
+.form-line.card-3col .form-product-item.new_ui.show_image .form-product-container .form-sub-label-container {
+    margin-right: 10px;
+    margin-top: 2px;
+}
+.form-line.card-3col div[data-wrapper-react="true"] .form-product-item.new_ui.show_image .p_image {
+    padding: 0;
+    float: none;
+    width: 100%;
+    height: 148px;
+}
+.form-line.card-3col div[data-wrapper-react="true"] .form-product-item.new_ui.show_image .image_zoom {
+    width: 100%;
+    height: 100%;
+}
+.form-line.card-3col div[data-wrapper-react="true"] .form-product-item.new_ui.show_image .image_area {
+    min-height: 124px;
+    max-height: 148px;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    border:0;
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #F4F4F4;
+}
+.form-line.card-3col div[data-wrapper-react="true"] .form-product-item.new_ui.show_image .title_description {
+    padding-left: 0;
+    padding: 0;
+    min-height: auto;
+}
+.form-line.card-3col div[data-wrapper-react="true"] .form-product-item.new_ui .form-product-details {
+    padding-top: 4px;
+    position: relative;
+    display: block;
+    top: 0;
+    left: 0;
+    margin-left: 0;
+}
+.form-line.card-3col .form-product-item.new_ui.show_image .form-product-container .form-product-description {
+    padding-right: 0 !important;
+}
+.form-line.card-3col div[data-wrapper-react="true"] .form-product-item.show_image .p_checkbox {
+    margin-top: 0;
+}
+.form-line.card-3col .form-product-item .p_checkbox {
+    margin-top: 0;
+}
+.form-line.card-3col .payment_footer.new_ui {
+    margin: 10px 0;
+    position: relative;
+}
+.form-line.card-3col .form-product-category-item {
+    margin: 0 0 18px 0;
+    width: 100%;
+}
+.form-line.card-3col .filter-container {
+    right: 0;
+}
+.form-line.card-3col .payment_footer.new_ui .total_area {
+    padding-right: 0;
+}
+.form-line.card-3col .form-product-item.new_ui.sold_out_product .form-product-details,
+.form-line.card-3col .form-product-item.not_enough_stock_product .form-product-details {
+    display: flex !important;
+    width: 100%;
+    flex-direction: column;
+}
+.form-line.card-3col .form-product-item.new_ui .form-product-details .payment-badge {
+    margin-top: 6px;
+    margin-bottom: 6px;
+    margin-left: 0;
+    position: relative;
+    max-width: 70px;
+}
+.form-line.card-3col .form-product-item.new_ui .form-product-details .payment-badge.just-sold-out-label {
+    max-width: auto;
+}
+.form-line.card-3col .form-product-item.new_ui .form-product-details .payment-badge.not_enough_stock_product {
+    max-width: auto;
+}
+.form-product-item.not-category-found,
+.form-line.card-2col div[data-wrapper-react="true"] .form-product-item.not-category-found.show_image,
+.form-line.card-3col div[data-wrapper-react="true"] .form-product-item.not-category-found.show_image,
+.form-product-item.not-category-found~br,
+.form-product-category-item.not-category-found,
+.form-product-category-item.not-category-found~br {
+    display: none !important;
+}
+
+.form-line.form-line.card-3col .form-product-item.new_ui.not_enough_stock_product .payment-badge {
+    display: block;
+    box-sizing:border-box;
+    width: calc(100% - 24px);
+    padding-left: 26px;
+    margin-left: 12px;
+    margin-bottom: 12px;
+}
+
+.form-line.form-line.card-2col .form-product-item.new_ui.not_enough_stock_product .payment-badge {
+    display: block;
+    box-sizing:border-box;
+    width: calc(100% - 36px);
+    padding-left: 26px;
+    margin-left: 18px;
+    margin-bottom: 18px;
+}
+/* Product list LAYOUT field //////////////// */
+
+/* Product List Element //////////////// */
+
+.rightPanel #app_wizards .add-integration p {
+    line-height: 16px !important;
+    font-size: 12px !important;
+    margin-bottom: 0 !important;
+}
+.line.selected-gateway-info {
+    background-color: #333b44;
+    margin: 1px -20px -20px !important;
+    padding: 20px;
+    align-items: center;
+    color: #ffffff;
+    font-weight: bold;
+    border-top: 1px solid #333a43;
+}
+.line.selected-gateway-info span {
+    margin-right: 12px;
+    float: left;
+    height: 50px;
+    width: 142px;
+    padding: 13px 6px;
+}
+.line.selected-gateway-info img {
+    margin-right:12px;
+    float: left;
+    border-radius: 3px;
+}
+.line.selected-gateway-info button {
+    width: 42px;
+    height: 42px;
+    margin-left: 4px;
+    float: left;
+    margin-top: 4px;
+    background-color: #3e464e;
+    border: 1px solid #31333c;
+    color: #ffffff;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.line.selected-gateway-info button:hover {
+    background-color: #1ba0f0;
+}
+.line.selected-gateway-info button i{
+    font-size: 22px;
+}
+.line.selected-gateway-info button.gateway-switch {
+    background-image: url(//cdn.jotfor.ms/assets/img/v4/payment_icons/PG-switch.svg);
+    background-size: 30px;
+    background-repeat:no-repeat;
+    background-position: center center;
+}
+.line.selected-gateway-info button.gateway-remove {
+    background-image: url('https://cdn.jotfor.ms/assets/img/payments/trash_gateway.svg');
+    background-size: 22px;
+    background-repeat:no-repeat;
+    background-position: center center;
+}
+.connection_alert {
+    clear: both;
+    background-color: #F15656;
+    height: 32px;
+    margin-top: 60px;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 30px;
+    padding-left: 42px;
+    border-radius: 2px;
+    position: relative;
+    background-image: url('https://cdn.jotfor.ms/assets/img/payments/disconnect.svg');
+    background-size: 22px;
+    background-repeat:no-repeat;
+    background-position: left 10px center;
+}
+
+.connection_alert:before{
+    content: "";
+    display: block;
+    width: 0; 
+    height: 0; 
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid #F15656;
+    position: absolute;
+    top: -8px;
+    right: 104px;
+}
+/* E.O. Product List Element //////////////// */
+
+/* Pay Later field //////////////// */
+.rightPanel #app_wizards .paymentsWizardV4 .customElementsArea.mainCard.moreSpace.isFormWrapper {
+    padding-bottom: 20px !important;
+}
+
+.rightPanel #app_wizards .paymentsWizardV4 .customElementsArea > div {
+    margin-top: 0px !important;
+}
+
+.rightPanel #app_wizards .paymentsWizardV4 .customElementsArea h5 {
+    padding-bottom: 20px !important;
+}
+
+.rightPanel #app_wizards .paymentsWizardV4 .hasCustomElementsArea.mainCard.moreSpace.isFormWrapper {
+    padding-bottom: 20px !important;
+
+}
+
+.rightPanel #app_wizards .paymentsWizardV4 .hasCustomElementsArea > div:first-child {
+    display: none;
+}
+
+.rightPanel #app_wizards .paymentsWizardV4 .hasCustomElementsArea h5 {
+    padding-bottom: 20px !important;
+}
+/* E.O. Pay Later field //////////////// */
+
+@media screen and (max-width: 480px),
+screen and (max-device-width: 768px) and (orientation: portrait),
+screen and (max-device-width: 415px) and (orientation: landscape) {
+    .form-line.card-3col div[data-wrapper-react="true"],
+    .form-line.card-2col div[data-wrapper-react="true"] {
+        flex-direction: column;
+    }
+    .form-line.card-3col div[data-wrapper-react="true"] .form-product-item.new_ui,
+    .form-line.card-2col div[data-wrapper-react="true"] .form-product-item.new_ui {
+        width: 100%;
+    }
+    .filter-container {
+        flex-direction: column;
+        width: 100%;
+        top: -66px;
+        right: 0 !important;
+    }
+    li.form-line .filter-container #payment-category-dropdown,
+    li.form-line .filter-container .payment-dropdown{
+        margin-bottom: 6px;
+        width: 100%;
+    }
+    li.form-line div.filter-container #payment-category-dropdown .select-area,
+    li.form-line div.filter-container .payment-dropdown .select-area {
+        width: 100% !important;
+    }
+    li.form-line div.filter-container #payment-category-dropdown .select-content,
+    li.form-line div.filter-container .payment-dropdown .select-content {
+        width: 100%;
+        max-width: 100% !important;
+    }
+    .form-label-top,
+    .form-label-top.search-enabled,
+    .form-label-top.category-enabled,
+    .form-label-top.search-enabled.category-enabled {
+        padding-right: 4px !important;
+    }
+    .form-product-category-item  {
+        width: 100%;
+    }
+    .p-filter-three-column ~ .form-input-wide .filter-container {
+        width: 100%;
+        display: flex;
+        flex-direction: inherit !important;
+        flex-wrap: wrap !important;
+        justify-content: space-between !important;
+        padding-right: 8px;
+        margin-left: 0;
+    }
+
+    .p-filter-three-column ~ .form-input-wide .filter-container #productSearch-input {
+        margin:0 0 12px 0 !important;
+    }
+
+    .p-filter-three-column ~ .form-input-wide .filter-container #payment-category-dropdown {
+        width: calc(100% - 50px) !important;
+        margin: 0 !important;
+    }
+    .p-filter-three-column ~ .form-input-wide .filter-container #payment-sorting-products-dropdown {
+        width: 40px !important;
+        margin: 0 !important;
+        min-width: auto;
+    }
+    .p-filter-three-column ~ .form-input-wide .filter-container #payment-sorting-products-dropdown .dropdown-hint,
+    .p-filter-three-column ~ .form-input-wide .filter-container #payment-sorting-products-dropdown .selected-value {
+        display: none;
+    }
+
+    .p-filter-three-column ~ .form-input-wide .filter-container .payment-dropdown#payment-sorting-products-dropdown .select-content {
+        left: unset;
+        right: 0px !important;
+        min-width: 200px !important;
+        max-width: 470px !important;
+        width: auto !important;
+    }
+}
